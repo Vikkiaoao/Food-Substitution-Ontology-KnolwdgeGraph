@@ -1,0 +1,1260 @@
+@prefix : <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44> .
+
+<http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#appliedToIngredient
+:appliedToIngredient rdf:type owl:ObjectProperty ;
+                     rdfs:domain :TechniqueInRecipe ;
+                     rdfs:range :Ingredient .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#appliedToRecipe
+:appliedToRecipe rdf:type owl:ObjectProperty ;
+                 rdfs:domain :TechniqueInRecipe ;
+                 rdfs:range :Recipe .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#canBeAppliedTo
+:canBeAppliedTo rdf:type owl:ObjectProperty ;
+                rdfs:domain :Technique ;
+                rdfs:range :Ingredient .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#canPerformFunction
+:canPerformFunction rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Ingredient ;
+                    rdfs:range :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#hasIngredient
+:hasIngredient rdf:type owl:ObjectProperty ;
+               rdfs:domain :Recipe ;
+               rdfs:range :Ingredient .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#isCommonSubstituteOf
+:isCommonSubstituteOf rdf:type owl:ObjectProperty ,
+                               owl:SymmetricProperty ;
+                      rdfs:domain :Ingredient ;
+                      rdfs:range :Ingredient .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#isPartOf
+:isPartOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :Ingredient ;
+          rdfs:range :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#originalIngredient
+:originalIngredient rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Substitution ;
+                    rdfs:range :Ingredient .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#roleDescription
+:roleDescription rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Role ;
+                 rdfs:range :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#roleInRecipe
+:roleInRecipe rdf:type owl:ObjectProperty ;
+              rdfs:domain :Role ;
+              rdfs:range :Recipe .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#roleOfIngredient
+:roleOfIngredient rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Role ;
+                  rdfs:range :Ingredient .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#subAppliedToRecipe
+:subAppliedToRecipe rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Substitution ;
+                    rdfs:range :Recipe .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#substitute
+:substitute rdf:type owl:ObjectProperty ;
+            rdfs:domain :Substitution ;
+            rdfs:range :Ingredient .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#usesTechnique
+:usesTechnique rdf:type owl:ObjectProperty ;
+               rdfs:domain :TechniqueInRecipe ;
+               rdfs:range :Technique .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#hasCookTime
+:hasCookTime rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Recipe ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#hasRecipeDescription
+:hasRecipeDescription rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Recipe ;
+                      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#ApperanceFunction
+:ApperanceFunction rdf:type owl:Class ;
+                   rdfs:subClassOf :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#ColorFunction
+:ColorFunction rdf:type owl:Class ;
+               rdfs:subClassOf :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#FlavorFunction
+:FlavorFunction rdf:type owl:Class ;
+                rdfs:subClassOf :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#Food
+:Food rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#FragranceFunction
+:FragranceFunction rdf:type owl:Class ;
+                   rdfs:subClassOf :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#Function
+:Function rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#Ingredient
+:Ingredient rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#NutritionAndEnergyFunction
+:NutritionAndEnergyFunction rdf:type owl:Class ;
+                            rdfs:subClassOf :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#Recipe
+:Recipe rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#Role
+:Role rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#Substitution
+:Substitution rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#Technique
+:Technique rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#TechniqueInRecipe
+:TechniqueInRecipe rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#TextureFunction
+:TextureFunction rdf:type owl:Class ;
+                 rdfs:subClassOf :Function .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#appleJuice
+:appleJuice rdf:type owl:NamedIndividual ,
+                     :Ingredient ;
+            :canPerformFunction :givesSweetness ;
+            :isCommonSubstituteOf :dryWhiteWine ;
+            :isPartOf :beverages .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#bakeryWares
+:bakeryWares rdf:type owl:NamedIndividual ,
+                      :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#beverages
+:beverages rdf:type owl:NamedIndividual ,
+                    :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#brownRiceMisoPaste
+:brownRiceMisoPaste rdf:type owl:NamedIndividual ,
+                             :Ingredient ;
+                    :canPerformFunction :makeItSalty ;
+                    :isCommonSubstituteOf :fishSauce ,
+                                          :soySauce ;
+                    :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#butter
+:butter rdf:type owl:NamedIndividual ,
+                 :Ingredient ;
+        :canPerformFunction :makeItTender ;
+        :isCommonSubstituteOf :coconutOil ,
+                              :oliveOil ;
+        :isPartOf :fatsAndOils .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#buttonChestnutMushroom
+:buttonChestnutMushroom rdf:type owl:NamedIndividual ,
+                                 :Ingredient ;
+                        :canPerformFunction :makeItChewy ;
+                        :isCommonSubstituteOf :oysterMushroom ,
+                                              :tofu ;
+                        :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#cayennePepper
+:cayennePepper rdf:type owl:NamedIndividual ,
+                        :Ingredient ;
+               :canPerformFunction :makeItSpicy ;
+               :isCommonSubstituteOf :chilliOil ;
+               :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#cerealsAndCerealProducts
+:cerealsAndCerealProducts rdf:type owl:NamedIndividual ,
+                                   :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#chervil
+:chervil rdf:type owl:NamedIndividual ,
+                  :Ingredient ;
+         :canPerformFunction :givesGreenDecoration ;
+         :isCommonSubstituteOf :parsley ;
+         :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#chilliOil
+:chilliOil rdf:type owl:NamedIndividual ,
+                    :Ingredient ;
+           :canPerformFunction :makeItSpicy ;
+           :isCommonSubstituteOf :cayennePepper ,
+                                 :sriracha ;
+           :isPartOf :fatsAndOils .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#chop
+:chop rdf:type owl:NamedIndividual ,
+               :Technique ;
+      :canBeAppliedTo :garlicClove ,
+                      :onion ,
+                      :parsley .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#cilantro
+:cilantro rdf:type owl:NamedIndividual ,
+                   :Ingredient ;
+          :canPerformFunction :givesGreenDecoration ;
+          :isCommonSubstituteOf :parsley ;
+          :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#coconutOil
+:coconutOil rdf:type owl:NamedIndividual ,
+                     :Ingredient ;
+            :isCommonSubstituteOf :butter ;
+            :isPartOf :fatsAndOils .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#confectionary
+:confectionary rdf:type owl:NamedIndividual ,
+                        :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#cornOil
+:cornOil rdf:type owl:NamedIndividual ,
+                  :Ingredient ;
+         :canPerformFunction :fryIngredient ,
+                             :makeItSoftened ;
+         :isCommonSubstituteOf :oliveOil ,
+                               :rapeseedOil ;
+         :isPartOf :fatsAndOils .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#creamyMushroomPasta
+:creamyMushroomPasta rdf:type owl:NamedIndividual ,
+                              :Recipe ;
+                     :hasIngredient :butter ,
+                                    :buttonChestnutMushroom ,
+                                    :doubleCream ,
+                                    :dryWhiteWine ,
+                                    :garlicClove ,
+                                    :lemonZest ,
+                                    :oliveOil ,
+                                    :onion ,
+                                    :parmesan ,
+                                    :parsley ,
+                                    :tagliatelle ;
+                     :hasCookTime "40mins" ;
+                     :hasRecipeDescription "Make this creamy mushroom pasta dish on days when you need a big bowl of comfort. Cream, parmesan, white wine, lemon zest and parsley make this a rich and flavourful dish." .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#cucumber
+:cucumber rdf:type owl:NamedIndividual ,
+                   :Ingredient ;
+          :canPerformFunction :provideUserVitamins ;
+          :isCommonSubstituteOf :zucchini ;
+          :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#cutIntoSmallCubes
+:cutIntoSmallCubes rdf:type owl:NamedIndividual ,
+                            :Technique ;
+                   :canBeAppliedTo :smokedTofu .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#dairyProducts
+:dairyProducts rdf:type owl:NamedIndividual ,
+                        :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#doubleCream
+:doubleCream rdf:type owl:NamedIndividual ,
+                      :Ingredient ;
+             :canPerformFunction :givesMilkFlavor ,
+                                 :givesSweetness ;
+             :isCommonSubstituteOf :evaporatedMilk ,
+                                   :yogurt ;
+             :isPartOf :dairyProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#driedBuckWheat
+:driedBuckWheat rdf:type owl:NamedIndividual ,
+                         :Ingredient ;
+                :canPerformFunction :provideUserEnergy ;
+                :isCommonSubstituteOf :millet ;
+                :isPartOf :cerealsAndCerealProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#dryJackCheese
+:dryJackCheese rdf:type owl:NamedIndividual ,
+                        :Ingredient ;
+               :canPerformFunction :givesCheeseFlavor ;
+               :isCommonSubstituteOf :parmesan ;
+               :isPartOf :dairyProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#dryWhiteWine
+:dryWhiteWine rdf:type owl:NamedIndividual ,
+                       :Ingredient ;
+              :isCommonSubstituteOf :appleJuice ,
+                                    :whiteWineVinegar ;
+              :isPartOf :beverages .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#edibleIces
+:edibleIces rdf:type owl:NamedIndividual ,
+                     :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#eggAndEggProducts
+:eggAndEggProducts rdf:type owl:NamedIndividual ,
+                            :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#eggNoodles
+:eggNoodles rdf:type owl:NamedIndividual ,
+                     :Ingredient ;
+            :canPerformFunction :provideUserEnergy ;
+            :isPartOf :cerealsAndCerealProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#evaporatedMilk
+:evaporatedMilk rdf:type owl:NamedIndividual ,
+                         :Ingredient ;
+                :canPerformFunction :givesMilkFlavor ;
+                :isCommonSubstituteOf :doubleCream ;
+                :isPartOf :dairyProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#fatsAndOils
+:fatsAndOils rdf:type owl:NamedIndividual ,
+                      :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#fettucine
+:fettucine rdf:type owl:NamedIndividual ,
+                    :Ingredient ;
+           :canPerformFunction :provideUserEnergy ;
+           :isCommonSubstituteOf :tagliatelle ;
+           :isPartOf :cerealsAndCerealProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#fishAndFishProducts
+:fishAndFishProducts rdf:type owl:NamedIndividual ,
+                              :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#fishSauce
+:fishSauce rdf:type owl:NamedIndividual ,
+                    :Ingredient ;
+           :canPerformFunction :makeItSalty ,
+                               :makeItTangy ;
+           :isCommonSubstituteOf :brownRiceMisoPaste ;
+           :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#foodStuffsForParticularNutritionalUses
+:foodStuffsForParticularNutritionalUses rdf:type owl:NamedIndividual ,
+                                                 :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#fruitsAndVegetables
+:fruitsAndVegetables rdf:type owl:NamedIndividual ,
+                              :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#fryIngredient
+:fryIngredient rdf:type owl:NamedIndividual ,
+                        :Function ,
+                        :TextureFunction .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#garlicClove
+:garlicClove rdf:type owl:NamedIndividual ,
+                      :Ingredient ;
+             :canPerformFunction :givesExtraBite ;
+             :isCommonSubstituteOf :garlicPowder ,
+                                   :onion ,
+                                   :shallots ;
+             :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#garlicPowder
+:garlicPowder rdf:type owl:NamedIndividual ,
+                       :Ingredient ;
+              :canPerformFunction :givesExtraBite ;
+              :isCommonSubstituteOf :garlicClove ;
+              :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#givesCheeseFlavor
+:givesCheeseFlavor rdf:type owl:NamedIndividual ,
+                            :FlavorFunction ,
+                            :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#givesExtraBite
+:givesExtraBite rdf:type owl:NamedIndividual ,
+                         :FlavorFunction ,
+                         :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#givesGreenDecoration
+:givesGreenDecoration rdf:type owl:NamedIndividual ,
+                               :ApperanceFunction ,
+                               :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#givesLemonFlavor
+:givesLemonFlavor rdf:type owl:NamedIndividual ,
+                           :FlavorFunction ,
+                           :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#givesMilkFlavor
+:givesMilkFlavor rdf:type owl:NamedIndividual ,
+                          :FlavorFunction ,
+                          :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#givesSweetness
+:givesSweetness rdf:type owl:NamedIndividual ,
+                         :FlavorFunction ,
+                         :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#givesWineFlavor
+:givesWineFlavor rdf:type owl:NamedIndividual ,
+                          :FlavorFunction ,
+                          :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#grate
+:grate rdf:type owl:NamedIndividual ,
+                :Technique ;
+       :canBeAppliedTo :garlicClove ,
+                       :parmesan .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#heat
+:heat rdf:type owl:NamedIndividual ,
+               :Technique ;
+      :canBeAppliedTo :butter ,
+                      :oliveOil ,
+                      :rapeseedOil .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#hoisinSauce
+:hoisinSauce rdf:type owl:NamedIndividual ,
+                      :Ingredient ;
+             :canPerformFunction :makeItSalty ;
+             :isCommonSubstituteOf :lightSoySauce ;
+             :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#honey
+:honey rdf:type owl:NamedIndividual ,
+                :Ingredient ;
+       :canPerformFunction :givesSweetness ;
+       :isCommonSubstituteOf :sugar ;
+       :isPartOf :sugarAndHoney .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#leeks
+:leeks rdf:type owl:NamedIndividual ,
+                :Ingredient ;
+       :canPerformFunction :givesExtraBite ;
+       :isCommonSubstituteOf :onion ,
+                             :springOnion ;
+       :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#lemonJuice
+:lemonJuice rdf:type owl:NamedIndividual ,
+                     :Ingredient ;
+            :canPerformFunction :givesLemonFlavor ,
+                                :makeItAcidic ;
+            :isCommonSubstituteOf :lemonZest ;
+            :isPartOf :beverages .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#lemonZest
+:lemonZest rdf:type owl:NamedIndividual ,
+                    :Ingredient ;
+           :canPerformFunction :givesLemonFlavor ,
+                               :makeItAcidic ;
+           :isCommonSubstituteOf :lemonJuice ,
+                                 :vinegar ;
+           :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#lightBrownSugar
+:lightBrownSugar rdf:type owl:NamedIndividual ,
+                          :Ingredient ;
+                 :canPerformFunction :givesSweetness ;
+                 :isCommonSubstituteOf :sugar ;
+                 :isPartOf :sugarAndHoney .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#lightSoySauce
+:lightSoySauce rdf:type owl:NamedIndividual ,
+                        :Ingredient ;
+               :canPerformFunction :makeItSalty ;
+               :isCommonSubstituteOf :hoisinSauce ,
+                                     :oysterSauce ;
+               :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#linguini
+:linguini rdf:type owl:NamedIndividual ,
+                   :Ingredient ;
+          :canPerformFunction :provideUserEnergy ;
+          :isPartOf :cerealsAndCerealProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#makeItAcidic
+:makeItAcidic rdf:type owl:NamedIndividual ,
+                       :FlavorFunction ,
+                       :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#makeItChewy
+:makeItChewy rdf:type owl:NamedIndividual ,
+                      :Function ,
+                      :TextureFunction .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#makeItSalty
+:makeItSalty rdf:type owl:NamedIndividual ,
+                      :FlavorFunction ,
+                      :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#makeItSmoky
+:makeItSmoky rdf:type owl:NamedIndividual ,
+                      :FlavorFunction ,
+                      :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#makeItSoftened
+:makeItSoftened rdf:type owl:NamedIndividual ,
+                         :Function ,
+                         :TextureFunction .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#makeItSpicy
+:makeItSpicy rdf:type owl:NamedIndividual ,
+                      :FlavorFunction ,
+                      :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#makeItTangy
+:makeItTangy rdf:type owl:NamedIndividual ,
+                      :FlavorFunction ,
+                      :Function .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#makeItTender
+:makeItTender rdf:type owl:NamedIndividual ,
+                       :Function ,
+                       :TextureFunction .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#meatAndMeatProducts
+:meatAndMeatProducts rdf:type owl:NamedIndividual ,
+                              :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#millet
+:millet rdf:type owl:NamedIndividual ,
+                 :Ingredient ;
+        :canPerformFunction :provideUserEnergy ;
+        :isCommonSubstituteOf :driedBuckWheat ;
+        :isPartOf :cerealsAndCerealProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#mixedMushrooms
+:mixedMushrooms rdf:type owl:NamedIndividual ,
+                         :Ingredient ;
+                :canPerformFunction :makeItChewy ;
+                :isCommonSubstituteOf :tofu ,
+                                      :zucchini ;
+                :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#oliveOil
+:oliveOil rdf:type owl:NamedIndividual ,
+                   :Ingredient ;
+          :canPerformFunction :fryIngredient ,
+                              :makeItTender ;
+          :isCommonSubstituteOf :butter ,
+                                :cornOil ,
+                                :peanutOil ;
+          :isPartOf :fatsAndOils .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#onion
+:onion rdf:type owl:NamedIndividual ,
+                :Ingredient ;
+       :canPerformFunction :givesExtraBite ,
+                           :makeItSpicy ;
+       :isCommonSubstituteOf :garlicClove ,
+                             :leeks ,
+                             :shallots ;
+       :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#otherFoods
+:otherFoods rdf:type owl:NamedIndividual ,
+                     :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#oysterMushroom
+:oysterMushroom rdf:type owl:NamedIndividual ,
+                         :Ingredient ;
+                :isCommonSubstituteOf :buttonChestnutMushroom ;
+                :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#oysterSauce
+:oysterSauce rdf:type owl:NamedIndividual ,
+                      :Ingredient ;
+             :canPerformFunction :makeItSalty ;
+             :isCommonSubstituteOf :lightSoySauce ;
+             :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#parmesan
+:parmesan rdf:type owl:NamedIndividual ,
+                   :Ingredient ;
+          :canPerformFunction :givesCheeseFlavor ;
+          :isCommonSubstituteOf :dryJackCheese ,
+                                :romano ;
+          :isPartOf :dairyProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#parsley
+:parsley rdf:type owl:NamedIndividual ,
+                  :Ingredient ;
+         :canPerformFunction :givesGreenDecoration ;
+         :isCommonSubstituteOf :chervil ,
+                               :cilantro ;
+         :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#peanutOil
+:peanutOil rdf:type owl:NamedIndividual ,
+                    :Ingredient ;
+           :canPerformFunction :fryIngredient ,
+                               :makeItSoftened ;
+           :isCommonSubstituteOf :oliveOil ,
+                                 :rapeseedOil ;
+           :isPartOf :fatsAndOils .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#persianCucumber
+:persianCucumber rdf:type owl:NamedIndividual ,
+                          :Ingredient ;
+                 :canPerformFunction :provideUserVitamins ;
+                 :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#provideUserEnergy
+:provideUserEnergy rdf:type owl:NamedIndividual ,
+                            :Function ,
+                            :NutritionAndEnergyFunction .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#provideUserVitamins
+:provideUserVitamins rdf:type owl:NamedIndividual ,
+                              :Function ,
+                              :NutritionAndEnergyFunction .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r10LemonZestLemonFlavorCMP
+:r10LemonZestLemonFlavorCMP rdf:type owl:NamedIndividual ,
+                                     :Role ;
+                            :roleDescription :givesLemonFlavor ;
+                            :roleInRecipe :creamyMushroomPasta ;
+                            :roleOfIngredient :lemonZest .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r11ParmesanCheeseFlavorCMP
+:r11ParmesanCheeseFlavorCMP rdf:type owl:NamedIndividual ,
+                                     :Role ;
+                            :roleDescription :givesCheeseFlavor ;
+                            :roleInRecipe :creamyMushroomPasta ;
+                            :roleOfIngredient :parmesan .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r12TagliatelleEnergyCMP
+:r12TagliatelleEnergyCMP rdf:type owl:NamedIndividual ,
+                                  :Role ;
+                         :roleDescription :provideUserEnergy ;
+                         :roleInRecipe :creamyMushroomPasta ;
+                         :roleOfIngredient :tagliatelle .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r13ParsleyGreenDecorationCMP
+:r13ParsleyGreenDecorationCMP rdf:type owl:NamedIndividual ,
+                                       :Role ;
+                              :roleDescription :givesGreenDecoration ;
+                              :roleInRecipe :creamyMushroomPasta ;
+                              :roleOfIngredient :parsley .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r14CucumberVitaminsSCP
+:r14CucumberVitaminsSCP rdf:type owl:NamedIndividual ,
+                                 :Role ;
+                        :roleDescription :provideUserVitamins ;
+                        :roleInRecipe :smackedCucumberPickles ;
+                        :roleOfIngredient :cucumber .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r15GarlicCloveExtraBiteSCP
+:r15GarlicCloveExtraBiteSCP rdf:type owl:NamedIndividual ,
+                                     :Role ;
+                            :roleDescription :givesExtraBite ;
+                            :roleInRecipe :smackedCucumberPickles ;
+                            :roleOfIngredient :garlicClove .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r16SugarSweetnessSCP
+:r16SugarSweetnessSCP rdf:type owl:NamedIndividual ,
+                               :Role ;
+                      :roleDescription :givesSweetness ;
+                      :roleInRecipe :smackedCucumberPickles ;
+                      :roleOfIngredient :sugar .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r17LightSoySauceSaltySCP
+:r17LightSoySauceSaltySCP rdf:type owl:NamedIndividual ,
+                                   :Role ;
+                          :roleDescription :makeItSalty ;
+                          :roleInRecipe :smackedCucumberPickles ;
+                          :roleOfIngredient :lightSoySauce .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r18VinegarAcidicSCP
+:r18VinegarAcidicSCP rdf:type owl:NamedIndividual ,
+                              :Role ;
+                     :roleDescription :makeItAcidic ;
+                     :roleInRecipe :smackedCucumberPickles ;
+                     :roleOfIngredient :vinegar .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r19ChilliOilSpicySCP
+:r19ChilliOilSpicySCP rdf:type owl:NamedIndividual ,
+                               :Role ;
+                      :roleDescription :makeItSpicy ;
+                      :roleInRecipe :smackedCucumberPickles ;
+                      :roleOfIngredient :chilliOil .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r1OliveTenderCMP
+:r1OliveTenderCMP rdf:type owl:NamedIndividual ,
+                           :Role ;
+                  :roleDescription :makeItTender ;
+                  :roleInRecipe :creamyMushroomPasta ;
+                  :roleOfIngredient :oliveOil .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r20RapeseedOilFryMMTNS
+:r20RapeseedOilFryMMTNS rdf:type owl:NamedIndividual ,
+                                 :Role ;
+                        :roleDescription :fryIngredient ;
+                        :roleInRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                        :roleOfIngredient :rapeseedOil .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r21MixedMushroomsChewyMMTNS
+:r21MixedMushroomsChewyMMTNS rdf:type owl:NamedIndividual ,
+                                      :Role ;
+                             :roleDescription :makeItChewy ;
+                             :roleInRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                             :roleOfIngredient :mixedMushrooms .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r22SmokedTofuTenderMMTNS
+:r22SmokedTofuTenderMMTNS rdf:type owl:NamedIndividual ,
+                                   :Role ;
+                          :roleDescription :makeItTender ;
+                          :roleInRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                          :roleOfIngredient :smokedTofu .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r23SmokedTofuSmokyMMTNS
+:r23SmokedTofuSmokyMMTNS rdf:type owl:NamedIndividual ,
+                                  :Role ;
+                         :roleDescription :makeItSmoky ;
+                         :roleInRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                         :roleOfIngredient :smokedTofu .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r24BrownRiceMisoPasteSaltyMMTNS
+:r24BrownRiceMisoPasteSaltyMMTNS rdf:type owl:NamedIndividual ,
+                                          :Role ;
+                                 :roleDescription :makeItSalty ;
+                                 :roleInRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                                 :roleOfIngredient :brownRiceMisoPaste .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r25DriedBuckWheatEnergyMMTNS
+:r25DriedBuckWheatEnergyMMTNS rdf:type owl:NamedIndividual ,
+                                       :Role ;
+                              :roleDescription :provideUserEnergy ;
+                              :roleInRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                              :roleOfIngredient :driedBuckWheat .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r26SpringOnionExtraBiteMMTNS
+:r26SpringOnionExtraBiteMMTNS rdf:type owl:NamedIndividual ,
+                                       :Role ;
+                              :roleDescription :givesExtraBite ;
+                              :roleInRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                              :roleOfIngredient :springOnion .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r2ButterTenderCMP
+:r2ButterTenderCMP rdf:type owl:NamedIndividual ,
+                            :Role ;
+                   :roleDescription :makeItTender ;
+                   :roleInRecipe :creamyMushroomPasta ;
+                   :roleOfIngredient :butter .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r3OnionSpicyCMP
+:r3OnionSpicyCMP rdf:type owl:NamedIndividual ,
+                          :Role ;
+                 :roleDescription :makeItSpicy ;
+                 :roleInRecipe :creamyMushroomPasta ;
+                 :roleOfIngredient :onion .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r4OnionExtraBiteCMP
+:r4OnionExtraBiteCMP rdf:type owl:NamedIndividual ,
+                              :Role ;
+                     :roleDescription :givesExtraBite ;
+                     :roleInRecipe :creamyMushroomPasta ;
+                     :roleOfIngredient :onion .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r5ChestnutMushroomChewyCMP
+:r5ChestnutMushroomChewyCMP rdf:type owl:NamedIndividual ,
+                                     :Role ;
+                            :roleDescription :makeItChewy ;
+                            :roleInRecipe :creamyMushroomPasta ;
+                            :roleOfIngredient :buttonChestnutMushroom .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r6GarlicCloveExtraBiteCMP
+:r6GarlicCloveExtraBiteCMP rdf:type owl:NamedIndividual ,
+                                    :Role ;
+                           :roleDescription :givesExtraBite ;
+                           :roleInRecipe :creamyMushroomPasta ;
+                           :roleOfIngredient :garlicClove .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r7DryWhiteWineWineFlavorCMP
+:r7DryWhiteWineWineFlavorCMP rdf:type owl:NamedIndividual ,
+                                      :Role ;
+                             :roleDescription :givesWineFlavor ;
+                             :roleInRecipe :creamyMushroomPasta ;
+                             :roleOfIngredient :dryWhiteWine .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r8DoubleCreamMilkFlavorCMP
+:r8DoubleCreamMilkFlavorCMP rdf:type owl:NamedIndividual ,
+                                     :Role ;
+                            :roleDescription :givesMilkFlavor ;
+                            :roleInRecipe :creamyMushroomPasta ;
+                            :roleOfIngredient :doubleCream .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#r9LemonZestMakeItAcidicCMP
+:r9LemonZestMakeItAcidicCMP rdf:type owl:NamedIndividual ,
+                                     :Role ;
+                            :roleDescription :makeItAcidic ;
+                            :roleInRecipe :creamyMushroomPasta ;
+                            :roleOfIngredient :lemonZest .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#rapeseedOil
+:rapeseedOil rdf:type owl:NamedIndividual ,
+                      :Ingredient ;
+             :canPerformFunction :fryIngredient ;
+             :isCommonSubstituteOf :cornOil ,
+                                   :peanutOil ;
+             :isPartOf :fatsAndOils .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#readyToEatSavories
+:readyToEatSavories rdf:type owl:NamedIndividual ,
+                             :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#riceWineVinegar
+:riceWineVinegar rdf:type owl:NamedIndividual ,
+                          :Ingredient ;
+                 :canPerformFunction :makeItAcidic ;
+                 :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#romano
+:romano rdf:type owl:NamedIndividual ,
+                 :Ingredient ;
+        :canPerformFunction :givesCheeseFlavor ;
+        :isCommonSubstituteOf :parmesan ;
+        :isPartOf :dairyProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#s1TagliatelleLinguiniCMP
+:s1TagliatelleLinguiniCMP rdf:type owl:NamedIndividual ,
+                                   :Substitution ;
+                          :originalIngredient :tagliatelle ;
+                          :subAppliedToRecipe :creamyMushroomPasta ;
+                          :substitute :linguini .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#s2CucumberPersianCucumberSCP
+:s2CucumberPersianCucumberSCP rdf:type owl:NamedIndividual ,
+                                       :Substitution ;
+                              :originalIngredient :cucumber ;
+                              :subAppliedToRecipe :smackedCucumberPickles ;
+                              :substitute :persianCucumber .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#s3VinegarRiceWineVinegarSCP
+:s3VinegarRiceWineVinegarSCP rdf:type owl:NamedIndividual ,
+                                      :Substitution ;
+                             :originalIngredient :vinegar ;
+                             :subAppliedToRecipe :smackedCucumberPickles ;
+                             :substitute :riceWineVinegar .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#s4DriedBuckWheatEggNoodlesMMTNS
+:s4DriedBuckWheatEggNoodlesMMTNS rdf:type owl:NamedIndividual ,
+                                          :Substitution ;
+                                 :originalIngredient :driedBuckWheat ;
+                                 :subAppliedToRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                                 :substitute :eggNoodles .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#saltsAndSpicesSoupsSaucesAndSaladsProteinProducts
+:saltsAndSpicesSoupsSaucesAndSaladsProteinProducts rdf:type owl:NamedIndividual ,
+                                                            :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#shallots
+:shallots rdf:type owl:NamedIndividual ,
+                   :Ingredient ;
+          :canPerformFunction :givesExtraBite ;
+          :isCommonSubstituteOf :garlicClove ,
+                                :onion ,
+                                :springOnion ;
+          :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#shred
+:shred rdf:type owl:NamedIndividual ,
+                :Technique ;
+       :canBeAppliedTo :springOnion .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#sliced
+:sliced rdf:type owl:NamedIndividual ,
+                 :Technique ;
+        :canBeAppliedTo :buttonChestnutMushroom ,
+                        :mixedMushrooms .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#smackedCucumberPickles
+:smackedCucumberPickles rdf:type owl:NamedIndividual ,
+                                 :Recipe ;
+                        :hasIngredient :chilliOil ,
+                                       :cucumber ,
+                                       :garlicClove ,
+                                       :lightSoySauce ,
+                                       :sugar ,
+                                       :vinegar ;
+                        :hasCookTime "5mins" ;
+                        :hasRecipeDescription "These Sichuan pickles are broken into pieces, then tossed in a tangy soy, vinegar and chilli oil dressing - a refreshing accompaniment to rich Asian main courses." .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#smokedTofu
+:smokedTofu rdf:type owl:NamedIndividual ,
+                     :Ingredient ;
+            :canPerformFunction :makeItSmoky ,
+                                :makeItTender ;
+            :isCommonSubstituteOf :tofu ;
+            :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#soySauce
+:soySauce rdf:type owl:NamedIndividual ,
+                   :Ingredient ;
+          :canPerformFunction :makeItSalty ;
+          :isCommonSubstituteOf :brownRiceMisoPaste ;
+          :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#springOnion
+:springOnion rdf:type owl:NamedIndividual ,
+                      :Ingredient ;
+             :canPerformFunction :givesExtraBite ;
+             :isCommonSubstituteOf :leeks ,
+                                   :shallots ;
+             :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#sriracha
+:sriracha rdf:type owl:NamedIndividual ,
+                   :Ingredient ;
+          :canPerformFunction :makeItSpicy ;
+          :isCommonSubstituteOf :chilliOil ;
+          :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#sugar
+:sugar rdf:type owl:NamedIndividual ,
+                :Ingredient ;
+       :canPerformFunction :givesSweetness ;
+       :isCommonSubstituteOf :honey ,
+                             :lightBrownSugar ;
+       :isPartOf :sugarAndHoney .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#sugarAndHoney
+:sugarAndHoney rdf:type owl:NamedIndividual ,
+                        :Food .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t10MixedMushroomsSlicedMMTNS
+:t10MixedMushroomsSlicedMMTNS rdf:type owl:NamedIndividual ,
+                                       :TechniqueInRecipe ;
+                              :appliedToIngredient :mixedMushrooms ;
+                              :appliedToRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                              :usesTechnique :sliced .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t11SmokedTofuCubesMMTNS
+:t11SmokedTofuCubesMMTNS rdf:type owl:NamedIndividual ,
+                                  :TechniqueInRecipe ;
+                         :appliedToIngredient :smokedTofu ;
+                         :appliedToRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                         :usesTechnique :cutIntoSmallCubes .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t12SpringOnionShredMMTNS
+:t12SpringOnionShredMMTNS rdf:type owl:NamedIndividual ,
+                                   :TechniqueInRecipe ;
+                          :appliedToIngredient :springOnion ;
+                          :appliedToRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                          :usesTechnique :shred .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t1OliveHeatCMP
+:t1OliveHeatCMP rdf:type owl:NamedIndividual ,
+                         :TechniqueInRecipe ;
+                :appliedToIngredient :oliveOil ;
+                :appliedToRecipe :creamyMushroomPasta ;
+                :usesTechnique :heat .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t2ButterHeatCMP
+:t2ButterHeatCMP rdf:type owl:NamedIndividual ,
+                          :TechniqueInRecipe ;
+                 :appliedToIngredient :butter ;
+                 :appliedToRecipe :creamyMushroomPasta ;
+                 :usesTechnique :heat .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t3OnionChopCMP
+:t3OnionChopCMP rdf:type owl:NamedIndividual ,
+                         :TechniqueInRecipe ;
+                :appliedToIngredient :onion ;
+                :appliedToRecipe :creamyMushroomPasta ;
+                :usesTechnique :chop .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t4BChestnutMushroomSlicedCMP
+:t4BChestnutMushroomSlicedCMP rdf:type owl:NamedIndividual ,
+                                       :TechniqueInRecipe ;
+                              :appliedToIngredient :buttonChestnutMushroom ;
+                              :appliedToRecipe :creamyMushroomPasta ;
+                              :usesTechnique :sliced .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t5GarlicCloveGrateCMP
+:t5GarlicCloveGrateCMP rdf:type owl:NamedIndividual ,
+                                :TechniqueInRecipe ;
+                       :appliedToIngredient :garlicClove ;
+                       :appliedToRecipe :creamyMushroomPasta ;
+                       :usesTechnique :grate .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t6ParmesanGrateCMP
+:t6ParmesanGrateCMP rdf:type owl:NamedIndividual ,
+                             :TechniqueInRecipe ;
+                    :appliedToIngredient :parmesan ;
+                    :appliedToRecipe :creamyMushroomPasta ;
+                    :usesTechnique :grate .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t7ParsleyChopCMP
+:t7ParsleyChopCMP rdf:type owl:NamedIndividual ,
+                           :TechniqueInRecipe ;
+                  :appliedToIngredient :parsley ;
+                  :appliedToRecipe :creamyMushroomPasta ;
+                  :usesTechnique :chop .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t8GarlicCloveChopSCP
+:t8GarlicCloveChopSCP rdf:type owl:NamedIndividual ,
+                               :TechniqueInRecipe ;
+                      :appliedToIngredient :garlicClove ;
+                      :appliedToRecipe :smackedCucumberPickles ;
+                      :usesTechnique :chop .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#t9RapeseedOilHeatMMTNS
+:t9RapeseedOilHeatMMTNS rdf:type owl:NamedIndividual ,
+                                 :TechniqueInRecipe ;
+                        :appliedToIngredient :rapeseedOil ;
+                        :appliedToRecipe <http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> ;
+                        :usesTechnique :heat .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#tagliatelle
+:tagliatelle rdf:type owl:NamedIndividual ,
+                      :Ingredient ;
+             :canPerformFunction :provideUserEnergy ;
+             :isCommonSubstituteOf :fettucine ;
+             :isPartOf :cerealsAndCerealProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#tofu
+:tofu rdf:type owl:NamedIndividual ,
+               :Ingredient ;
+      :canPerformFunction :makeItChewy ,
+                          :makeItTender ;
+      :isCommonSubstituteOf :buttonChestnutMushroom ,
+                            :mixedMushrooms ,
+                            :smokedTofu ;
+      :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#vinegar
+:vinegar rdf:type owl:NamedIndividual ,
+                  :Ingredient ;
+         :canPerformFunction :makeItAcidic ;
+         :isCommonSubstituteOf :lemonZest ;
+         :isPartOf :saltsAndSpicesSoupsSaucesAndSaladsProteinProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#whiteWineVinegar
+:whiteWineVinegar rdf:type owl:NamedIndividual ,
+                           :Ingredient ;
+                  :canPerformFunction :makeItAcidic ;
+                  :isCommonSubstituteOf :dryWhiteWine ;
+                  :isPartOf :beverages .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#yogurt
+:yogurt rdf:type owl:NamedIndividual ,
+                 :Ingredient ;
+        :canPerformFunction :givesMilkFlavor ;
+        :isCommonSubstituteOf :doubleCream ;
+        :isPartOf :dairyProducts .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#zucchini
+:zucchini rdf:type owl:NamedIndividual ,
+                   :Ingredient ;
+          :canPerformFunction :makeItChewy ,
+                              :provideUserVitamins ;
+          :isCommonSubstituteOf :cucumber ,
+                                :mixedMushrooms ;
+          :isPartOf :fruitsAndVegetables .
+
+
+###  http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup
+<http://www.semanticweb.org/zhangwenqidediannao/ontologies/2022/6/untitled-ontology-44#misoMushroom&TofuNoodleSoup> rdf:type owl:NamedIndividual ,
+                                                                                                                             :Recipe ;
+                                                                                                                    :hasIngredient :brownRiceMisoPaste ,
+                                                                                                                                   :driedBuckWheat ,
+                                                                                                                                   :mixedMushrooms ,
+                                                                                                                                   :rapeseedOil ,
+                                                                                                                                   :smokedTofu ,
+                                                                                                                                   :springOnion ;
+                                                                                                                    :hasCookTime "25mins" ;
+                                                                                                                    :hasRecipeDescription "Rustle up this miso, mushroom and tofu noodle soup with just six simple ingredients. Healthy and low in calories, it makes a tasty light lunch or supper." .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
